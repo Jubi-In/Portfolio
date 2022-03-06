@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AboutMe from "./AboutMe";
+import Project from "./Project";
 
 const Container = styled.div`
   /* height: calc(100vh - 60px); */
@@ -47,6 +48,7 @@ const Main = () => {
         </TextContainer>
       </MainContainer>
       <AboutMe />
+      <Project />
     </Container>
   );
 };

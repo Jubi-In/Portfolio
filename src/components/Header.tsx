@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.header`
@@ -22,25 +23,29 @@ const List = styled.ul`
   align-items: center;
 `;
 
-const Logo = styled.li`
+const Logo = styled(Link)`
   margin: 0 60px;
   font-weight: 600;
   font-size: 1rem;
+  text-decoration: none;
+  color: white;
 `;
 
-const Category = styled.li`
+const Category = styled(Link)`
   margin-right: 30px;
+  text-decoration: none;
+  color: white;
 `;
 
 const Header = () => {
   return (
     <Container>
       <List>
-        <Logo>Jubi In</Logo>
-        <Category>About me</Category>
+        <Logo to="/">Jubi In</Logo>
+        <Category to="/">About me</Category>
         {/* <Category>Stack</Category> */}
-        <Category>Project</Category>
-        <Category>Want</Category>
+        <Category to="/project">Project</Category>
+        <Category to="/want">Want</Category>
       </List>
     </Container>
   );
